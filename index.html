@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Simple Blog</h1>
+            <p class="subtitle">Share your thoughts and ideas</p>
+        </header>
+
+        <section class="post-form">
+            <h2>Create New Post</h2>
+            <form id="postForm">
+                <div class="form-group">
+                    <label for="postTitle">Title</label>
+                    <input type="text" id="postTitle" placeholder="Enter post title..." required>
+                </div>
+                <div class="form-group">
+                    <label for="postContent">Content</label>
+                    <textarea id="postContent" rows="6" placeholder="Write your post content here..." required></textarea>
+                </div>
+                <button type="submit" id="submitBtn">Publish Post</button>
+                <button type="button" id="cancelBtn" style="display: none;">Cancel</button>
+            </form>
+        </section>
+
+        <section class="posts-section">
+            <h2>All Posts</h2>
+            <div id="postsContainer">
+                <!-- Posts will be dynamically inserted here -->
+            </div>
+            <div id="emptyState" class="empty-state">
+                <p>No posts yet. Create your first post above!</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
